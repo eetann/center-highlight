@@ -12,16 +12,18 @@ import replace from '@rollup/plugin-replace'
 const isProduction = process.env.NODE_ENV === 'production'
 
 export default {
-  input: 'src/manifest.json',
+  input: 'src/manifest.ts',
   output: {
     dir: 'dist',
     format: 'esm',
-    chunkFileNames: path.join('chunks','[name]-[hash].js'),
+    chunkFileNames: path.join('chunks', '[name]-[hash].js'),
   },
   plugins: [
     replace({
-      'process.env.NODE_ENV': isProduction ? JSON.stringify( 'production' ) : JSON.stringify( 'development' ),
-      preventAssignment: true
+      'process.env.NODE_ENV': isProduction
+        ? JSON.stringify('production')
+        : JSON.stringify('development'),
+      preventAssignment: true,
     }),
     chromeExtension(),
     // Adds a Chrome extension reloader during watch mode

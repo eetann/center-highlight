@@ -1,26 +1,9 @@
 {
-  "name": "@extend-chrome/ts-react-boilerplate",
+  "name": "Center Highlight",
   "version": "1.0.0",
   "private": true,
-  "description": "Chrome extension boilerplate with TypeScript and React",
-  "keywords": [
-    "chrome-extension",
-    "web-extension",
-    "typescript",
-    "react",
-    "rollup",
-    "boilerplate"
-  ],
-  "homepage": "https://github.com/extend-chrome/ts-react-boilerplate#readme",
-  "bugs": {
-    "url": "https://github.com/extend-chrome/ts-react-boilerplate/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/extend-chrome/ts-react-boilerplate.git"
-  },
-  "license": "MIT",
-  "author": "Jack Steam<jacksteamdev@gmail.com>",
+  "description": "Chrome extension for highlight",
+  "author": "eetann",
   "scripts": {
     "build": "rollup -c",
     "release": "cross-env NODE_ENV=production rollup -c",
